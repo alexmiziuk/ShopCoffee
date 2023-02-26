@@ -1,0 +1,71 @@
+.best {
+	padding: 84px 10px 110px 10px;
+	background: url(../../Image/best__bg.jpg) no-repeat 50% / cover;
+	&__cards {
+		margin-top: 39px;
+		display: grid;
+		justify-content: center;
+		grid-template: 240px / repeat(3, 220px);
+		gap: 30px 71px;
+		grid-auto-rows: 240px;
+		text-decoration: none;
+	}
+	&__card {
+		display: grid;
+		justify-content: center;
+		padding: 22px 0;
+		background: rgba(255, 255, 255, 0.65);
+		border-radius: 8px;
+		list-style-type: none;
+	}
+	&__img {
+		display: block;
+		margin: 0 auto;
+		width: 151px;
+		height: 130px;
+		&-resize {
+			margin-top: 16px;
+			width: 167px;
+			height: 115px;
+		}
+	}
+	&__descr {
+		align-self: center;
+	}
+	&__price {
+		place-self: end;
+		align-self: center;
+	}
+}
+
+@media (max-width: 992px) {
+	.best {
+		&__cards {
+			gap: 30px 40px;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.best {
+		&__cards {
+			grid-template: 240px 240px / repeat(2, 220px);
+		}
+	}
+}
+@media (max-width: 575px) {
+	.best {
+		&__cards {
+			grid-template: 240px 240px / repeat(2, 220px);
+			gap: 20px 20px;
+		}
+	}
+
+	@media (max-width: 484px) {
+		.best {
+			&__cards {
+				grid-template: repeat(3, 240px) / 220px;
+			}
+		}
+	}
+}

@@ -1,0 +1,16 @@
+.separator {
+	margin: 12px auto 0 auto;
+	display: grid;
+	grid-template-columns: 60px 40px 60px;
+	grid-template-rows: 1px 29.3px 1px;
+	column-gap: 20px;
+	width: 200px;
+
+	&__line {
+		margin-top: 14.95px;
+		border: 0.8px solid #000000;
+	}
+	&__beans {
+		padding-left: 7px;
+	}
+}

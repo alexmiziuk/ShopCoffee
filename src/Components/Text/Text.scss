@@ -1,0 +1,32 @@
+.title {
+	font-family: "Merienda-Bold";
+	text-align: center;
+	margin: 0 auto;
+	&-fz40 {
+		font-size: 40px;
+		line-height: 58px;
+		color: #ffffff;
+	}
+	&-fz24 {
+		font-size: 24px;
+		line-height: 35px;
+		color: #000000;
+	}
+}
+
+.text {
+	text-align: center;
+	&-fz12 {
+		font-family: 'Merienda-Regular';
+		color: #ffffff;
+		font-size: 12px;
+		line-height: 17px;
+	}
+	&-fz14 {
+		font-family: 'Merienda-Bold';
+		text-align: center;
+		font-size: 14px;
+		line-height: 20px;
+		text-align: center;
+	}
+}

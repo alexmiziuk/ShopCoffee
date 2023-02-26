@@ -1,0 +1,44 @@
+.hamburger {
+	display: flex;
+	visibility: hidden;
+	flex-direction: column;
+	justify-content: space-between;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	height: 22px;
+	&__line {
+		z-index: 1000;
+		display: block;
+		height: 3px;
+		width: 30px;
+		background-color: white;
+	}
+}
+.hidden{
+	position: absolute;
+	display: none;
+}
+.clouse{
+	display: block;
+	visibility: hidden;
+	position: absolute;
+	visibility: hidden;
+	top: 6px;
+	right: 10px;
+	height: 49px;
+	width: 49px;
+}
+.visible {
+	visibility: hidden;
+}
+
+@media (max-width: 575px) {
+	.hamburger {
+		visibility: visible;
+	}
+	.visible {
+		visibility: visible;
+		position: fixed;
+	}
+}
