@@ -38,6 +38,7 @@ function App() {
 
 	const [state, setState] = useState(false);
 	const [inputValue, setInputValue] = useState('');
+	const [errorMessage, setErrorMessage] = useState('');
 
 	const best = 'best';
 	const filteredBestItems = items.filter((item) => Object.values(item).some((el) => el === best));
@@ -64,13 +65,13 @@ function App() {
 				<Hamburger menuActive={state} setMenuActive={setState} />
 				<Switch>
 					<Route exact path='/'>
-						<MainPage bestCoffee={filteredBestItems} />
+						<MainPage bestCoffee={filteredBestItems}  />
 					</Route>
 					<Route exact path='/ourcoffee'>
-						<CoffeePage  moreAbout={filteredGeneralItems} onChainge={inputTexttoFilter} chooseProducts={chooseProducts} />
+						<CoffeePage moreAbout={filteredGeneralItems} onChainge={inputTexttoFilter} chooseProducts={chooseProducts} errorMessage={errorMessage} setErrorMessage={setErrorMessage} inputValue={inputValue} setInputValue={setInputValue} />
 					</Route>
 					<Route exact path='/pleasure'>
-						<Pleasure chooseCoffee={filteredGeneralItems} />
+						<Pleasure chooseProducts={chooseProducts} />
 					</Route>
 				</Switch>
 				<FooterNavBar />

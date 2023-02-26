@@ -3,7 +3,7 @@ import AboutOurGoods from '../../AboutOurGoods/AboutOurGoods';
 import ChooseCoffee from '../../СhooseСoffee/СhooseCoffee';
 import './PleasurePage.scss';
 
-const PleasurePage = ({chooseCoffee}) => {
+const PleasurePage = ({chooseProducts}) => {
 	return (
 		<>
 			<header className='pleasure'>
@@ -12,7 +12,7 @@ const PleasurePage = ({chooseCoffee}) => {
 				</h1>
 			</header>
 			<AboutOurGoods />
-			<ChooseCoffee chooseCoffee={chooseCoffee} />
+			<ChooseCoffee chooseProducts={chooseProducts} />
 		</>
 	);
 };

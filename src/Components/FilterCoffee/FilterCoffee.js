@@ -1,13 +1,29 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
+import { useEffect } from 'react';
+
 import './FilterCoffee.scss'
 
 
-const FilterCoffee = ({ onChainge }) => {
+const FilterCoffee = ({ onChainge, setErrorMessage, inputValue, setInputValue }) => {
 
 	const inputTexttoFilter = (event) => {
-		onChainge(event.target.value.toLowerCase());
-		
+		const filterValue = event.target.value;
+		if (/^[A-Za-z\b]+$/.test(filterValue) || event.target.value.length === 0) { // Проверяем, содержит ли значение только латинские буквы и пробелы, также приравниваем input к нулю по умолчанию
+			onChainge(filterValue.toLowerCase());
+			setErrorMessage('');
+		} else {
+			setErrorMessage('Введите текст на латинице');
+		}
 	};
+
+	const history = useHistory();
+	useEffect(() => {
+		return history.listen(() => {
+		  // сбрасываем значение фильтра при переходе на другую страницу
+		  setInputValue('');
+		});
+	 }, );
 
 	return (
 		<section className='filter'>
