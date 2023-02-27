@@ -6,7 +6,7 @@ import AboutIt from '../../AboutIt/AboutIt';
 
 import './CoffeePage.scss';
 
-const CoffeePage = ({ moreAbout, onChainge, chooseProducts, errorMessage, setErrorMessage, inputValue, setInputValue}) => {
+const CoffeePage = ({ moreAbout, onChainge, chooseProducts, errorMessage, setErrorMessage, inputValue, setInputValue,  setLocationFilter}) => {
 	return (
 		<>
 			<header className='coffee'>
@@ -15,9 +15,9 @@ const CoffeePage = ({ moreAbout, onChainge, chooseProducts, errorMessage, setErr
 				</h1>
 			</header>
 			< AboutOurBeans />
-			< FilterCoffee onChainge={onChainge} chooseProducts={chooseProducts} setErrorMessage={setErrorMessage} inputValue={inputValue} setInputValue={setInputValue} />
-			{errorMessage? (<div>{errorMessage}</div>) : (< СhooseCoffee chooseProducts={chooseProducts} />)}
-			{/* {errorMessage && <div>{errorMessage}</div>} */}
+			< FilterCoffee onChainge={onChainge} chooseProducts={chooseProducts} setErrorMessage={setErrorMessage} inputValue={inputValue} setInputValue={setInputValue} setLocationFilter={setLocationFilter} />
+			{errorMessage ? (<div>{errorMessage}</div>) : (< СhooseCoffee chooseProducts={chooseProducts} />)}
+			
 			
 			< AboutIt moreAbout={moreAbout} />
 

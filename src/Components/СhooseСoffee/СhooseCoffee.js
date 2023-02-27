@@ -5,9 +5,7 @@ const СhooseCoffee = ({ chooseProducts }) => {
 	return (
 		<section className='choose' >
 			<ul className="choose__cards">
-
-			{chooseProducts.map(item => (
-
+				{chooseProducts.map(item => (
 					<li key={item.id} className="choose__card">
 						<img className='choose__img' src={item.src} alt='choose__coffee' >
 						</img>
@@ -19,9 +17,7 @@ const СhooseCoffee = ({ chooseProducts }) => {
 					</li>
 				))}
 			</ul>
-
-
-		</section>
+		</section >
 	);
 };
 
