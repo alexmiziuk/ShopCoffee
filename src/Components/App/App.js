@@ -32,7 +32,7 @@ function App() {
 		{ id: 4, src: Aromisto, src1: BigAromisto, target: 'aromisto', value: Aromisto, item: 'AROMISTICO Coffee 1 kg', price: '6.99$', price1: '6.99$', made: 'Brazil', category: 'general', href: '#aromistico', adress: 'aromistico' },
 		{ id: 5, src: Solimo, src1: BigSolimo, target: 'solimo', value: Solimo, item: 'SOLIMO Coffee Beans 2 kg', price: '10.73$', price1: '10.73$', made: 'Kenya', category: 'general', href: '#solimo', adress: 'solimo' },
 		{ id: 6, src: Presto, src1: BigPresto, target: 'presto', value: Presto, item: 'PRESTO Coffee Beans 1 kg', price: '115.99$', price1: '115.99$', made: 'Columbia', category: 'general', href: '#presto', adress: 'presto' },
-		{ id: 7, src: Arabika, src1: BigArabika, target: ' arabika', value: Arabika, item: 'ARABIKA Coffee Beans 1 kg', price: '15.99$', price1: '15.99$', made: 'Kenya', category: 'general', href: '#arabika', adress: 'arabika' },
+		{ id: 7, src: Arabika, src1: BigArabika, target: 'arabika', value: Arabika, item: 'ARABIKA Coffee Beans 1 kg', price: '15.99$', price1: '15.99$', made: 'Kenya', category: 'general', href: '#arabika', adress: 'arabika' },
 		{ id: 8, src: AltaRoma, src1: BigAltaRoma, target: 'altaroma', value: AltaRoma, item: 'ALTA ROMA Coffee 1 kg', price: '12.59$', price1: '12.59$', made: 'Brazil', category: 'general', href: '#altaroma', adress: 'altaroma' },
 		{ id: 9, src: Egoiste, src1: BigEgoist, target: 'egoiste', value: Egoiste, item: 'EGOISTE Coffee Beans 1 kg', price: '100.99$', price1: '100.99$', made: 'Columbia', category: 'general', href: '#egoiste', adress: 'egoiste' }
 	]

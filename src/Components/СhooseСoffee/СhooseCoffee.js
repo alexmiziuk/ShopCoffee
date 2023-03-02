@@ -2,17 +2,13 @@ import React from 'react';
 import './ChooseCoffee.scss';
 
 const СhooseCoffee = ({onFilterChange, chooseProducts, blockVisible, SetBlockVisible}) => {
-
 	
-	
-
-		
 
 	return (
 		<section className={blockVisible? 'choose unvisible__block' : 'choose'} >
 			<ul className="choose__cards">
 				{chooseProducts.map(item => (
-					<li key={item.id} className='choose__card' onClick={() => SetBlockVisible(!blockVisible)} >
+					<li key={item.id} className='choose__card' onClick={() => SetBlockVisible(!blockVisible)} id={item.adress} >
 						<a href={item.href} className='choose__link' key={item.target} onClick={() => onFilterChange(item.target)}>
 						<img className='choose__img' src={item.src} alt='choose__coffee' >
 						</img>
