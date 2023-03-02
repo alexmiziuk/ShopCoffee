@@ -6,7 +6,7 @@ import AboutIt from '../../AboutIt/AboutIt';
 
 import './CoffeePage.scss';
 
-const CoffeePage = ({ moreAbout, onChainge, chooseProducts, errorMessage, setErrorMessage, inputValue, setInputValue,  setLocationFilter}) => {
+const CoffeePage = ({itemadd, onFilterChange, onChainge, chooseProducts, errorMessage, setErrorMessage, inputValue, setInputValue, setLocationFilter, blockVisible, SetBlockVisible}) => {
 	return (
 		<>
 			<header className='coffee'>
@@ -14,14 +14,10 @@ const CoffeePage = ({ moreAbout, onChainge, chooseProducts, errorMessage, setErr
 					Our Coffee
 				</h1>
 			</header>
-			< AboutOurBeans />
-			< FilterCoffee onChainge={onChainge} chooseProducts={chooseProducts} setErrorMessage={setErrorMessage} inputValue={inputValue} setInputValue={setInputValue} setLocationFilter={setLocationFilter} />
-			{errorMessage ? (<div>{errorMessage}</div>) : (< СhooseCoffee chooseProducts={chooseProducts} />)}
-			
-			
-			< AboutIt moreAbout={moreAbout} />
-
-
+			{!blockVisible ? (< AboutOurBeans />) : (<div></div>)}
+			{!blockVisible ? (< FilterCoffee onChainge={onChainge} chooseProducts={chooseProducts} setErrorMessage={setErrorMessage} inputValue={inputValue} setInputValue={setInputValue} setLocationFilter={setLocationFilter} />) : (<div></div>)}
+			{errorMessage ? (<div>{errorMessage}</div>) : (< СhooseCoffee onFilterChange={onFilterChange} chooseProducts={chooseProducts} blockVisible={blockVisible} SetBlockVisible={SetBlockVisible} />)}
+			<AboutIt itemadd={itemadd}  blockVisible={blockVisible} SetBlockVisible={SetBlockVisible} />
 		</>
 	);
 };

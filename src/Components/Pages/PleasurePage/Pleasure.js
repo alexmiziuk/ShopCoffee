@@ -1,9 +1,10 @@
 import React from 'react';
 import AboutOurGoods from '../../AboutOurGoods/AboutOurGoods';
 import ChooseCoffee from '../../СhooseСoffee/СhooseCoffee';
+import AboutIt from '../../AboutIt/AboutIt';
 import './PleasurePage.scss';
 
-const PleasurePage = ({chooseProducts}) => {
+const PleasurePage = ({itemadd, onFilterChange,  chooseProducts, moreAbout, blockVisible, SetBlockVisible}) => {
 	return (
 		<>
 			<header className='pleasure'>
@@ -12,7 +13,8 @@ const PleasurePage = ({chooseProducts}) => {
 				</h1>
 			</header>
 			<AboutOurGoods />
-			<ChooseCoffee chooseProducts={chooseProducts} />
+			<ChooseCoffee onFilterChange={onFilterChange} chooseProducts={chooseProducts} blockVisible={blockVisible} SetBlockVisible={SetBlockVisible}  />
+			<AboutIt itemadd={itemadd} blockVisible={blockVisible} SetBlockVisible={SetBlockVisible} />
 		</>
 	);
 };

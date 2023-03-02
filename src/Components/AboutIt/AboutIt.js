@@ -3,11 +3,16 @@ import Separator from '../Separator/Separator';
 
 import './AboutIt.scss'
 
-const AboutIt = ({ moreAbout }) => {
+const AboutIt = ({itemadd, blockVisible, SetBlockVisible}) => {
+
+	
+
 	return (
-		<div className='aboutit'>
-			{moreAbout.map(item => (
-				<div className="aboutit__wrapper" key={item.id}>
+		<div className={blockVisible?'aboutit ' : 'aboutit unvisible__aboutit'}>
+			{itemadd.map(item => (
+				// eslint-disable-next-line no-useless-concat
+				<div className='aboutit__wrapper'/* {item.st ? 'aboutit__wrapper' + ' ' + item.class : 'aboutit__wrapper'} */ key={item.id} id={item.adress}>
+					<button className="aboutit__clouse" onClick={() => SetBlockVisible(false)}>X</button>
 					<img src={item.src1} alt="coffee_aromistico" className="aboutit__img" />
 					<div className="aboutit__block">
 						<h2 className="aboutit__title title title-fz24">

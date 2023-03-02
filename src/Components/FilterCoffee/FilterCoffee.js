@@ -7,30 +7,23 @@ import './FilterCoffee.scss'
 
 const FilterCoffee = ({ onChainge, setErrorMessage, inputValue, setInputValue }) => {
 
-
-	
-	
 	const inputTexttoFilter = (event) => {
 		const filterValue = event.target.value;
-		if (/^[A-Za-z\b]+$/.test(filterValue) || filterValue.length === 0 ) { // Проверяем, содержит ли значение только латинские буквы и пробелы, также приравниваем input к нулю по умолчанию
+		if (/^[A-Za-z\b]+$/.test(filterValue) || filterValue.length === 0) { // Проверяем, содержит ли значение только латинские буквы и пробелы, также приравниваем input к нулю по умолчанию
 			onChainge(filterValue.toLowerCase());
 			setErrorMessage('');
 		} else {
 			setErrorMessage('Введите текст на латинице');
 		}
 	};
-	
-
 
 	const history = useHistory();
 	useEffect(() => {
 		return history.listen(() => {
-		  // сбрасываем значение фильтра при переходе на другую страницу
-		  setInputValue('');
+			// сбрасываем значение фильтра при переходе на другую страницу
+			setInputValue('');
 		});
 	},);
-	
-	
 
 	return (
 		<section className='filter'>
