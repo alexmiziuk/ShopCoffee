@@ -12,7 +12,7 @@ const AboutIt = ({ itemadd, blockVisible, SetBlockVisible }) => {
 		<div className={blockVisible?'aboutit ' : 'aboutit unvisible__aboutit'}>
 			{itemadd.map(item => (
 				// eslint-disable-next-line no-useless-concat
-				<div className='aboutit__wrapper' id={item.adress}>
+				<div className='aboutit__wrapper' key={item.id} id={item.adress}>
 					
 					<img src={item.src1} alt="coffee_aromistico" className="aboutit__img" />
 					<div className="aboutit__block">
