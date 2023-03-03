@@ -4,18 +4,11 @@ import Separator from '../Separator/Separator';
 import './FooterNavBar.scss';
 
 import footerImg from '../../Image/Icons/footer__beens.svg'
-/* import Beens from '../../Image/Icons/about-beens.svg' */
 
 
-const FooterNavBar = ({ SetBlockVisible, blockVisible }) => {
+
+const FooterNavBar = ({ defoltChooseCoffee }) => {
 	
-	const defoltChooseCoffee = () => {
-		if (!blockVisible) {
-			SetBlockVisible(blockVisible)
-		} else {
-			SetBlockVisible(!blockVisible)
-	}
-}
 	return (
 		<nav className='footer'>
 			<div className='footer__box'>

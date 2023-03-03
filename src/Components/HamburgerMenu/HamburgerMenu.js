@@ -3,23 +3,15 @@ import { NavLink } from 'react-router-dom';
 import './HamburgerMenu.scss'
 import NavBeans from '../../Image/Icons/nav-beens.svg'
 
-const HamburgerMenu = ({ menuActive, setMenuActive, SetBlockVisible, blockVisible }) => {
-	const defoltChooseCoffee = () => {
-		if (!blockVisible) {
-			SetBlockVisible(blockVisible)
-		} else {
-			SetBlockVisible(!blockVisible)
-	}
-}
+const HamburgerMenu = ({ menuActive, setMenuActive, defoltChooseCoffee }) => {
+	menuActive ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'auto';
 	return (
 		<div className={menuActive ? 'layer active' : 'layer'}>
 			<img src={NavBeans} alt="Coffee_beans" className="layer__beans" />
-			{/* <img src={NavBeans} alt="Coffee_beans" className="layer__beans" />
-			<img src={NavBeans} alt="Coffee_beans" className="layer__beans" /> */}
 			<div className='layer__menu'>
 				<div className="layer__box">
 					<ul className="layer__items">
-						<li className="layer__item"  onClick={() => defoltChooseCoffee()}>
+						<li className="layer__item" onClick={() => defoltChooseCoffee()}>
 							<NavLink exact activeStyle={{ 'fontWeight': '700' }} to='/' className="layer__link text-fz12" onClick={() => setMenuActive(false)}>
 								Coffee house
 							</NavLink>
@@ -38,7 +30,6 @@ const HamburgerMenu = ({ menuActive, setMenuActive, SetBlockVisible, blockVisibl
 				</div>
 			</div>
 		</div >
-
 	);
 };
 

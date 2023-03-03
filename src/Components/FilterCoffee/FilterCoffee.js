@@ -3,7 +3,7 @@ import React from 'react';
 import './FilterCoffee.scss'
 
 
-const FilterCoffee = ({ onChainge, setErrorMessage, inputValue }) => {
+const FilterCoffee = ({ onChainge, setErrorMessage, inputValue, chooseProducts  }) => {
 
 	const inputTexttoFilter = (event) => {
 		const filterValue = event.target.value;
@@ -11,10 +11,14 @@ const FilterCoffee = ({ onChainge, setErrorMessage, inputValue }) => {
 			onChainge(filterValue.toLowerCase());
 			setErrorMessage('');
 		} else {
-			setErrorMessage('Введите текст на латинице');
+			setErrorMessage('Enter the text in Latin (Введіть текст на латиниці)');
 		}
 		
 	};
+
+
+
+
 
 	return (
 		<section className='filter'>
@@ -32,6 +36,7 @@ const FilterCoffee = ({ onChainge, setErrorMessage, inputValue }) => {
 					<button value="Columbia" onClick={inputTexttoFilter} className="filter__button filter__button-left text text-fz12 " style={{ 'borderRadius': '0px 4px 4px 0px' }}>Columbia</button>
 				</div>
 			</div>
+			{chooseProducts.length === 0 ? <div className='filter__message'>Nothing found (Нічого не знайдено)</div> : <div></div>}
 		</section>
 	);
 };

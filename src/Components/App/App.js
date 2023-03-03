@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
 import Pleasure from '../Pages/PleasurePage/Pleasure';
 import FooterNavBar from '../FooterNavBar/FooterNavBar';
 import HeaderNavBar from '../HeaderNavBar/HeaderNavBar';
@@ -6,7 +8,6 @@ import MainPage from '../Pages/MainPage/MainPage';
 import CoffeePage from '../Pages/CoffeePage/CoffeePage';
 import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
 import Hamburger from '../Hamburger/Hamburger';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import './App.css';
 
@@ -23,10 +24,7 @@ import BigArabika from '../../Image/BigCards/AboutItArabika.jpg';
 import BigAltaRoma from '../../Image/BigCards/aboutItAltaRoma.jpg';
 import BigEgoist from '../../Image/BigCards/aboutItEgoist.jpg';
 
-
-
 function App() {
-
 
 	const items = [
 		{ id: 1, src: Solimo, item: 'Solimo Coffee Beans 2 kg', price: '10.73$', category: 'best' },
@@ -39,6 +37,7 @@ function App() {
 		{ id: 8, src: AltaRoma, src1: BigAltaRoma, target: 'altaroma', value: AltaRoma, item: 'ALTA ROMA Coffee 1 kg', price: '12.59$', price1: '12.59$', made: 'Brazil', category: 'general', href: '#altaroma', adress: 'altaroma' },
 		{ id: 9, src: Egoiste, src1: BigEgoist, target: 'egoiste', value: Egoiste, item: 'EGOISTE Coffee Beans 1 kg', price: '100.99$', price1: '100.99$', made: 'Columbia', category: 'general', href: '#egoiste', adress: 'egoiste' }
 	]
+	
 	const [blockVisible, SetBlockVisible] = useState(false);
 	const [state, setState] = useState(false);
 	const [inputValue, setInputValue] = useState('');
@@ -57,24 +56,34 @@ function App() {
 	const chooseProducts = filteredGeneralItems.filter((item) => {
 		return Object.values(item).some((value) => value.toString().toLowerCase().includes(inputValue))
 	}); // фильтрация в filter, неважен регистр в input
+	
+	if (chooseProducts.length === 0) {
+
+		console.log('Нічого не знайдено');
+	
+	}
 
 
 	const [filteredItems, setFilteredItems] = useState(chooseProducts);
-	
+
 	const onFilterChange = (target) => {
 		const filtered = items.filter((item) => item.target === target);
 		setFilteredItems(filtered);
 	};
 
-	
-
-
+	const defoltChooseCoffee = () => {
+		if (!blockVisible) {
+			SetBlockVisible(blockVisible)
+		} else {
+			SetBlockVisible(!blockVisible)
+		}
+	}
 
 	return (
 		<Router>
 			<div className='app'>
-				<HeaderNavBar navActive={state} setNavActive={setState} blockVisible={blockVisible} SetBlockVisible={SetBlockVisible} />
-				<HamburgerMenu menuActive={state} setMenuActive={setState}  blockVisible={blockVisible} SetBlockVisible={SetBlockVisible} />
+				<HeaderNavBar navActive={state} setNavActive={setState} defoltChooseCoffee={defoltChooseCoffee} />
+				<HamburgerMenu menuActive={state} setMenuActive={setState} defoltChooseCoffee={defoltChooseCoffee} />
 				<Hamburger menuActive={state} setMenuActive={setState} />
 				<Switch>
 					<Route exact path='/'>
@@ -87,7 +96,7 @@ function App() {
 						<Pleasure itemadd={filteredItems} onFilterChange={onFilterChange} chooseProducts={chooseProducts} blockVisible={blockVisible} SetBlockVisible={SetBlockVisible} />
 					</Route>
 				</Switch>
-				<FooterNavBar blockVisible={blockVisible} SetBlockVisible={SetBlockVisible} />
+				<FooterNavBar defoltChooseCoffee={defoltChooseCoffee} />
 			</div>
 		</Router>
 	);

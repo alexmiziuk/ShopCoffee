@@ -30,7 +30,7 @@ const CoffeePage = ({ itemadd, onFilterChange, onChainge, chooseProducts, errorM
 			</header>
 			{!blockVisible ? (< AboutOurBeans />) : (<div></div>)}
 			{!blockVisible ? (< FilterCoffee onChainge={onChainge} chooseProducts={chooseProducts} setErrorMessage={setErrorMessage} inputValue={inputValue} setInputValue={setInputValue} setLocationFilter={setLocationFilter} />) : (<div></div>)}
-			{errorMessage ? (<div>{errorMessage}</div>) : (< СhooseCoffee onFilterChange={onFilterChange} chooseProducts={chooseProducts} blockVisible={blockVisible} SetBlockVisible={SetBlockVisible} />)}
+			{errorMessage ? (<div className='coffee__message'>{errorMessage}</div>) : (< СhooseCoffee onFilterChange={onFilterChange} chooseProducts={chooseProducts} blockVisible={blockVisible} SetBlockVisible={SetBlockVisible} />)}
 			<AboutIt itemadd={itemadd} blockVisible={blockVisible} SetBlockVisible={SetBlockVisible} />
 		</>
 	);

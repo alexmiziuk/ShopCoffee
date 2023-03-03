@@ -5,15 +5,7 @@ import '../Text/Text.scss'
 
 import NavBeens from '../../Image/Icons/nav-beens.svg'
 
-const HeaderNavBar = ({ navActive, setNavActive, SetBlockVisible, blockVisible }) => {
-
-	const defoltChooseCoffee = () => {
-		if (!blockVisible) {
-			SetBlockVisible(blockVisible)
-		} else {
-			SetBlockVisible(!blockVisible)
-	}
-}
+const HeaderNavBar = ({ navActive, setNavActive, defoltChooseCoffee }) => {
 
 	return (
 		<nav className={navActive ? 'nav nav-visible' : 'nav'}>

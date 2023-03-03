@@ -1,4 +1,9 @@
 .coffee {
 	background: url("../../../Image/coffee-bg.png"); 
 	padding: 127px 10px 75px 10px;
+	&__message {
+		text-align: center;
+		margin-top: 30px;
+		font-family: 'Merienda-Regular';
+	}
 }
