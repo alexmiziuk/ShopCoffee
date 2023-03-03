@@ -1,19 +1,13 @@
 import React from 'react';
-
 import Separator from '../Separator/Separator';
 
 import './AboutIt.scss'
 
 const AboutIt = ({ itemadd, blockVisible, SetBlockVisible }) => {
-	
-	
-	
 	return (
-		<div className={blockVisible?'aboutit ' : 'aboutit unvisible__aboutit'}>
+		<div className={blockVisible ? 'aboutit ' : 'aboutit unvisible__aboutit'}>
 			{itemadd.map(item => (
-				// eslint-disable-next-line no-useless-concat
 				<div className='aboutit__wrapper' key={item.id} id={item.adress}>
-					
 					<img src={item.src1} alt="coffee_aromistico" className="aboutit__img" />
 					<div className="aboutit__block">
 						<a href={item.href} className="aboutit__clouse" onClick={() => SetBlockVisible(false)}>X</a>

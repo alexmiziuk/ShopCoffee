@@ -4,7 +4,7 @@ import ChooseCoffee from '../../СhooseСoffee/СhooseCoffee';
 import AboutIt from '../../AboutIt/AboutIt';
 import './PleasurePage.scss';
 
-const PleasurePage = ({itemadd, onFilterChange,  chooseProducts, moreAbout, blockVisible, SetBlockVisible}) => {
+const PleasurePage = ({itemadd, onFilterChange,  chooseProducts, blockVisible, SetBlockVisible}) => {
 	return (
 		<>
 			<header className='pleasure'>
@@ -12,7 +12,8 @@ const PleasurePage = ({itemadd, onFilterChange,  chooseProducts, moreAbout, bloc
 				For your pleasure
 				</h1>
 			</header>
-			<AboutOurGoods />
+			{!blockVisible ? (<AboutOurGoods />) : (<div></div>)}
+			
 			<ChooseCoffee onFilterChange={onFilterChange} chooseProducts={chooseProducts} blockVisible={blockVisible} SetBlockVisible={SetBlockVisible}  />
 			<AboutIt itemadd={itemadd} blockVisible={blockVisible} SetBlockVisible={SetBlockVisible} />
 		</>

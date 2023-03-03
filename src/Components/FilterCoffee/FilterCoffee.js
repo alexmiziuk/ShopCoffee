@@ -1,11 +1,9 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
-import { useEffect } from 'react';
 
 import './FilterCoffee.scss'
 
 
-const FilterCoffee = ({ onChainge, setErrorMessage, inputValue, setInputValue }) => {
+const FilterCoffee = ({ onChainge, setErrorMessage, inputValue }) => {
 
 	const inputTexttoFilter = (event) => {
 		const filterValue = event.target.value;
@@ -15,15 +13,8 @@ const FilterCoffee = ({ onChainge, setErrorMessage, inputValue, setInputValue })
 		} else {
 			setErrorMessage('Введите текст на латинице');
 		}
+		
 	};
-
-	const history = useHistory();
-	useEffect(() => {
-		return history.listen(() => {
-			// сбрасываем значение фильтра при переходе на другую страницу
-			setInputValue('');
-		});
-	},);
 
 	return (
 		<section className='filter'>

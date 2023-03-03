@@ -7,19 +7,27 @@ import footerImg from '../../Image/Icons/footer__beens.svg'
 /* import Beens from '../../Image/Icons/about-beens.svg' */
 
 
-const FooterNavBar = () => {
+const FooterNavBar = ({ SetBlockVisible, blockVisible }) => {
+	
+	const defoltChooseCoffee = () => {
+		if (!blockVisible) {
+			SetBlockVisible(blockVisible)
+		} else {
+			SetBlockVisible(!blockVisible)
+	}
+}
 	return (
 		<nav className='footer'>
 			<div className='footer__box'>
 				<img className='footer__beens' src={footerImg} alt="Beens" />
 				<ul className="footer__items">
-					<li className="footer__item">
+					<li className="footer__item" onClick={() => defoltChooseCoffee()}>
 						<NavLink exact activeStyle={{ 'fontWeight': '700' }} to='/' className='footer__link' alt=''>Coffee house</NavLink>
 					</li>
-					<li className="footer__item">
+					<li className="footer__item" onClick={() => defoltChooseCoffee()}>
 						<NavLink exact activeStyle={{ 'fontWeight': '700' }} to='/ourcoffee' className='footer__link' alt=''>Our coffee</NavLink>
 					</li>
-					<li className="footer__item">
+					<li className="footer__item" onClick={() => defoltChooseCoffee()}>
 						<NavLink exact activeStyle={{ 'fontWeight': '700' }} to='/pleasure' className='footer__link' alt=''>For your pleasure</NavLink>
 						<a href='/#' className='footer__link' alt=''>
 						</a>

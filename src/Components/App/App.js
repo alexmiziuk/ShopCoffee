@@ -7,6 +7,7 @@ import CoffeePage from '../Pages/CoffeePage/CoffeePage';
 import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
 import Hamburger from '../Hamburger/Hamburger';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
 import './App.css';
 
 import Aromisto from '../../Image/Cards/Aromistico.jpg';
@@ -21,6 +22,8 @@ import BigPresto from '../../Image/BigCards/aboutItPresto.png';
 import BigArabika from '../../Image/BigCards/AboutItArabika.jpg';
 import BigAltaRoma from '../../Image/BigCards/aboutItAltaRoma.jpg';
 import BigEgoist from '../../Image/BigCards/aboutItEgoist.jpg';
+
+
 
 function App() {
 
@@ -63,13 +66,15 @@ function App() {
 		setFilteredItems(filtered);
 	};
 
+	
+
 
 
 	return (
 		<Router>
 			<div className='app'>
-				<HeaderNavBar navActive={state} setNavActive={setState} />
-				<HamburgerMenu menuActive={state} setMenuActive={setState} />
+				<HeaderNavBar navActive={state} setNavActive={setState} blockVisible={blockVisible} SetBlockVisible={SetBlockVisible} />
+				<HamburgerMenu menuActive={state} setMenuActive={setState}  blockVisible={blockVisible} SetBlockVisible={SetBlockVisible} />
 				<Hamburger menuActive={state} setMenuActive={setState} />
 				<Switch>
 					<Route exact path='/'>
@@ -82,7 +87,7 @@ function App() {
 						<Pleasure itemadd={filteredItems} onFilterChange={onFilterChange} chooseProducts={chooseProducts} blockVisible={blockVisible} SetBlockVisible={SetBlockVisible} />
 					</Route>
 				</Switch>
-				<FooterNavBar />
+				<FooterNavBar blockVisible={blockVisible} SetBlockVisible={SetBlockVisible} />
 			</div>
 		</Router>
 	);
