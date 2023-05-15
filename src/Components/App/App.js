@@ -37,7 +37,7 @@ function App() {
 		{ id: 8, src: AltaRoma, src1: BigAltaRoma, target: 'altaroma', value: AltaRoma, item: 'ALTA ROMA Coffee 1 kg', price: '12.59$', price1: '12.59$', made: 'Brazil', category: 'general', href: '#altaroma', adress: 'altaroma' },
 		{ id: 9, src: Egoiste, src1: BigEgoist, target: 'egoiste', value: Egoiste, item: 'EGOISTE Coffee Beans 1 kg', price: '100.99$', price1: '100.99$', made: 'Columbia', category: 'general', href: '#egoiste', adress: 'egoiste' }
 	]
-	
+
 	const [blockVisible, SetBlockVisible] = useState(false);
 	const [state, setState] = useState(false);
 	const [inputValue, setInputValue] = useState('');
@@ -56,13 +56,6 @@ function App() {
 	const chooseProducts = filteredGeneralItems.filter((item) => {
 		return Object.values(item).some((value) => value.toString().toLowerCase().includes(inputValue))
 	}); // фильтрация в filter, неважен регистр в input
-	
-	if (chooseProducts.length === 0) {
-
-		console.log('Нічого не знайдено');
-	
-	}
-
 
 	const [filteredItems, setFilteredItems] = useState(chooseProducts);
 
