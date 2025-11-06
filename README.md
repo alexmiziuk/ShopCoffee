@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+# 🌐 Coffee shop
+A modern coffee shop website
+---
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## ✨ About the Project
+Three-page coffee shop website showcasing different coffee products, offers, and brand story.
+Built with clean layout, responsive design, and smooth user experience in mind.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🔧 Technologies Used
 
-### `npm start`
+**Frontend**
+- ⚛️ **React 18** — library for building user interfaces  
+- 🧭 **React Router DOM 5** — client-side routing  
+- 🎨 **Sass (SCSS)** — CSS preprocessor for styling  
+- ⚖️ **normalize.css** — CSS normalization across browsers  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Build & Configuration**
+- ⚙️ **Create React App (react-scripts 5)** — build and development environment  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Testing**
+- 🧪 **@testing-library/react**, **@testing-library/jest-dom**, **@testing-library/user-event** — component testing utilities  
 
-### `npm test`
+**Additional**
+- 📊 **web-vitals** — measuring and reporting web performance metrics
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🚀 Features
+- Clean and minimalistic design
+- Responsive layout
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📸 Screenshots / Demo
+![Homepage Screenshot](./screenshots/home.jpg)  
+![Contact Section](./screenshots/Our-coffee.jpg)  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Live Demo:** [View Website](https://coffee-shop-4eca7.web.app/)
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 💻 Local Setup
+To run the project locally:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+git clone https://github.com/alexmiziuk/ShopCoffee.git
+cd ShopCoffee
+npm install
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+🧰 **Build Modes**
 
-## Learn More
+In the **"scripts"** section, several commands are defined for different environments:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+| Command | Description |
+|----------|--------------|
+| **npm start** | Runs the app in development mode using the local development server |
+| **npm run build** | Builds the app for production (optimized and minified) |
+| **npm test** | Launches the test runner in interactive watch mode |
+| **npm run eject** | Exposes the configuration files for full control (this action is irreversible) |
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 📄 License
+MIT License © Oleksandr Miziuk
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## ✉ Contacts
+* **Email:** oleksandr.miziyk@gmail.com
+* **GitHub:** [github.com/alexmiziuk](https://github.com/alexmiziuk)
